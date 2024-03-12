@@ -1,6 +1,6 @@
-export default function CardType1(props: any) {
+export default function ConseilCard(props: any) {
     return (
-        <div className="cardType1Container">
+        <div className="conseilCardContainer">
             <p style={{ color: 'white', fontWeight: 'bold', fontSize: 25 }}>{props.number}</p>
             <p style={{ color: 'white', fontWeight: 'bold', fontSize: 25, marginTop: 30 }}>{props.title}</p>
         </div>
