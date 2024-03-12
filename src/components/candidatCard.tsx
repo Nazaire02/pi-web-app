@@ -1,12 +1,18 @@
+import candidat1 from '../assets/candidats/candidat1.png';
+
 export default function CandidatCard(props: any) {
     return (
-        <div className="conseilCardContainer">
-            <h4 style={{ color: 'grey', fontWeight: 'bold', fontSize: 25, flexWrap:'wrap', textAlign:'center', marginBottom:3 }}>{props.title}</h4>
-            <ul>
-            {props.items.map((element: any, index: number) => (
-                    <li key={index} style={{ color: 'grey', fontSize: 25 }}>{element}</li>
-                ))}
-            </ul>
+        <div className="candidatCardContainer">
+            <div >
+                <img src={props.candidat.picture} className='image'/>
+            </div>
+            <div style={{marginLeft:8}}>
+                <p style={{fontSize:20, color:'grey', fontWeight:'bold'}}>{props.candidat.nom}</p>
+                <p style={{fontSize:20, color:'grey', fontWeight:'bold'}}>{props.candidat.prenoms}</p>
+                <p style={{fontSize:20, color:'grey', fontWeight:'bold'}}>{props.candidat.anniversaire}</p>
+                <p style={{fontSize:20, color:'grey', fontWeight:'bold'}}>{props.candidat.parti}</p>
+                <p style={{fontSize:20, color:'grey', fontWeight:'bold'}}>{props.candidat.numCandidat}</p>
+            </div>
         </div>
-)
+    )
 }
