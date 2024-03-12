@@ -53,8 +53,12 @@ export default function Home() {
         <Box
           sx={{
             marginInline:4,
+            display:'flex',
+            flexDirection:'column',
+            alignItems:'center'
           }}
         >
+            <div className="stroke">ELECTION MUNICIPALE-COMMUNE D'ABOBO</div>
             <Outlet/>
         </Box>
       </Box>
