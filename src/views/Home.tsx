@@ -55,7 +55,6 @@ export default function Home() {
             marginInline:4,
             display:'flex',
             flexDirection:'column',
-            alignItems:'center'
           }}
         >
             <div className="stroke">ELECTION MUNICIPALE-COMMUNE D'ABOBO</div>
