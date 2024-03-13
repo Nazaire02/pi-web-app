@@ -1,5 +1,3 @@
-import candidat1 from '../assets/candidats/candidat1.png';
-
 export default function CandidatCard(props: any) {
     return (
         <div className="candidatCardContainer">

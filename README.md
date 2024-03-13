@@ -1,3 +1,13 @@
+Comment lancer l'application après avoir cloner le projet
+*Assurer vous d'avoir correctement installé node de préférence la version 18.18.0
+*mettez vous à la racine du projet depuis votre terminal et taper la commande:
+npm install
+*Maintenant que tous les packages sont bien installés, vous pour lancer la commande:
+npm run dev, pour lancer le projet
+*utiliser l'uri qui s'affiche dans votre console pour exécuter l'appli dans votre navigateur
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
