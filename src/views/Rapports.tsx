@@ -1,21 +1,51 @@
 import "../App.css"; // Assurez-vous que le chemin est correct pour votre fichier CSS
 
+ 
+
 export default function Rapports() {
   return (
-    <div>
-      <h2>Rapports sur les pourcentages de votes des électeurs par bureau de vote</h2>
+    <div style={{textAlign: "center"}}>
+      <h2>Rapports de l'election dans la commune d'abobo</h2>
 
-      <div className="chart-container">
-        <div className="bar" style={{ height: "30%" }} id="bar1"><span className="label">30%</span></div>
-        <div className="bar" style={{ height: "40%" }} id="bar2"><span className="label">40%</span></div>
-        <div className="bar" style={{ height: "50%" }} id="bar3"><span className="label">50%</span></div>
-        <div className="bar" style={{ height: "60%" }} id="bar4"><span className="label">60%</span></div>
-        <div className="bar" style={{ height: "70%" }} id="bar5"><span className="label">70%</span></div>
-        <div className="bar" style={{ height: "40%" }} id="bar6"><span className="label">40%</span></div>
-        <div className="bar" style={{ height: "50%" }} id="bar7"><span className="label">50%</span></div>
-        <div className="bar" style={{ height: "60%" }} id="bar8"><span className="label">60%</span></div>
-        <div className="bar" style={{ height: "70%" }} id="bar9"><span className="label">70%</span></div>
-        <div className="bar" style={{ height: "80%" }} id="bar10"><span className="label">80%</span></div>
+      <div className="card-container">
+        <div className="card">
+          <div className="number">4</div>
+          <div className="name">NOMBRE CANDIDATS</div>
+        </div>
+
+        <div className="card">
+           
+          <div className="number">409 972</div>
+          <div className="name">NOMBRE INSCRITS</div>
+        </div>
+
+        <div className="card">
+           
+          <div className="number">84 545</div>
+          <div className="name">VOTANTS</div>
+        </div>
+
+        <div className="card">
+           
+          <div className="number">1 433</div>
+          <div className="name">BULLETINS NULS</div>
+        </div>
+
+        <div className="card">
+          
+          <div className="number">83 112</div>
+          <div className="name">SUFFRAGES EXPRIMÉS</div>
+        </div>
+
+        <div className="card">
+          <div className="number">20.88%</div>
+          <div className="name">TAUX PARTICIPATIONS</div>
+        </div>
+
+        <div className="card">
+          <div className="number">325 427</div>
+          <div className="name">ABSTENTIONS</div>
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import { Box, ThemeProvider, createTheme } from '@mui/material';
 import Typography from '@mui/material/Typography';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, Outlet } from 'react-router-dom';
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
       }
     }
   });
-  const [screenHeight, setScreenHeight] = useState(window.innerHeight);
+  const [screenHeight] = useState(window.innerHeight);
 
 
   return (
