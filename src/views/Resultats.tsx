@@ -1,4 +1,5 @@
-import PourcentageCard from "../components/pourcentageBande"
+import PourcentageCard from "../components/pourcentageBande";
+import winner from "../assets/win.png";
 
 export default function Resultats() {
     const resultats = [
@@ -31,10 +32,12 @@ export default function Resultats() {
                     ))}
                 </div>
                 <div>
-                    <p>Au regard des résultats actuels, le nouveau maire de la commune d'Abobo est:</p>
-                    <div>
-                        <h2>M. {resultats[0].nom} {resultats[0].prenoms}</h2>
-                        <div></div>
+                    <p style={{fontWeight:'bold', color:'grey', fontSize:23}}>Au regard des résultats actuels, le nouveau maire de la commune d'Abobo est:</p>
+                    <div style={{display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'center'}}>
+                        <h2 style={{textShadow:'2px 2px 4px #FF8200', color:'#FF8200', fontSize:30, fontWeight:'bolder', marginRight:'4%', letterSpacing: 4}}>M. {resultats[0].nom} {resultats[0].prenoms}</h2>
+                        <div>
+                            <img src={winner} alt="" style={{width:300, height:'auto'}}/>
+                        </div>
                     </div>
                 </div>
             </div>
