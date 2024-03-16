@@ -1,4 +1,5 @@
 export default function PourcentageCard(props: any) {
+    console.log(props.resultat)
     return (
         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
             <p style={{ color: 'grey', fontSize: 20, width: '40%', minWidth: '40%' }}> <span style={{ fontWeight: 'bold', fontStyle: 'italic', marginRight: '4%' }}>{props.resultat.rang}</span>{props.resultat.nom} {props.resultat.prenoms}</p>

@@ -1,7 +1,8 @@
 import { Box, ThemeProvider, createTheme } from '@mui/material';
 import Typography from '@mui/material/Typography';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, Outlet } from 'react-router-dom';
+import { getElecteurs } from '../service/electeur';
 
 export default function Home() {
   const theme = createTheme({

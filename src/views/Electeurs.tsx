@@ -1,9 +1,26 @@
+import { useEffect, useState } from "react";
 import "../App.css"
-export default function Electeurs(){
-    return(
-        <><div>
-            <h2>Liste des électeurs</h2> 
-        </div><table>
+import axios from "axios";
+export default function Electeurs() {
+    const [electeurs, setElecteurs] = useState<any[]>([]);
+    useEffect(() => {
+        const fetchUsers = async () => {
+            try {
+                const response = await axios.get('http://localhost:8000/api/electeur/getAll');
+                const fetchedElecteurs = response.data.electeurs;
+                setElecteurs(fetchedElecteurs);
+            } catch (error) {
+                console.error('Error fetching electeurs:', error);
+            }
+        };
+        fetchUsers();
+    }, []);
+    return (
+        <div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+            <div>
+                <h2>Liste des électeurs</h2>
+            </div>
+            <table>
                 <thead>
                     <tr>
                         <th>Nom</th>
@@ -11,24 +28,21 @@ export default function Electeurs(){
                         <th>Numéro Électeur</th>
                         <th>Bureau de Vote</th>
                         <th>Centre de Vote</th>
-                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>John</td>
-                        <td>Doe</td>
-                        <td>123456789</td>
-                        <td>Bureau A</td>
-                        <td>Centre 1</td>
-                        <td>
-                            <button>Afficher</button>
-                            <button>Modifier</button>
-                            <button>Supprimer</button>
-                        </td>
-                    </tr>
+                    {electeurs.map((electeur, index: Number) => (
+                        <tr>
+                            <td>{electeur.nom}</td>
+                            <td>{electeur.prenoms}</td>
+                            <td>{electeur.idCard}</td>
+                            <td>{electeur.bureauDeVotre}</td>
+                            <td>{electeur.centreDeVote}</td>
+                        </tr>
+                    ))}
                 </tbody>
-            </table></>
-            
+            </table>
+        </div>
+
     )
 }
